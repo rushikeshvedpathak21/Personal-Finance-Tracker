@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Finance Tracker</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2> Finance Tracker</h2>
+            <p id="userName"> Loading...</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item active" data-page="dashboard">
+                <span class="icon"></span> Dashboard
+            </a>
+            <a href="expenses.html" class="nav-item" data-page="expenses">
+                <span class="icon"></span> Expenses
+            </a>
+            <a href="income.html" class="nav-item" data-page="income">
+                <span class="icon"></span> Income
+            </a>
+            <a href="budget.html" class="nav-item" data-page="budget">
+                <span class="icon"></span> Budget
+            </a>
+            <a href="transactions.html" class="nav-item" data-page="transactions">
+                <span class="icon"></span> Transactions
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <button class="logout-btn" id="logoutBtn">
+                <span></span> Logout
+            </button>
+        </div>
+    </aside>
+
+    
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Dashboard</h1>
+            <p>Here's your financial summary for this month.</p>
+        </div>
+
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Total Income</div>
+                <div class="stat-value income" id="totalIncome">$0.00</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Total Expenses</div>
+                <div class="stat-value expense" id="totalExpenses">$0.00</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Balance</div>
+                <div class="stat-value balance" id="balance">$0.00</div>
+            </div>
+        </div>
+
+        
+        <div class="dashboard-grid">
+
+            
+            <div class="card">
+                <h2>Recent Expenses</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentExpenses">
+                        <tr><td colspan="3"><div class="empty-state"><p>Loading...</p></div></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            <div class="card">
+                <h2>Recent Income</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentIncome">
+                        <tr><td colspan="3"><div class="empty-state"><p>Loading...</p></div></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<script src="../js/utils.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>
